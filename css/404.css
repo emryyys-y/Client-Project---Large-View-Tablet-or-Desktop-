@@ -1,0 +1,238 @@
+/*
+ * CSS from João Sousa, "404 Page Not Found" (CodePen).
+ * https://codepen.io/joaosousa/pen/ZEEKWmv
+ *
+ * Illustration by Masoud Ardestani, "Cezan - 404 Page Not Found."
+ * https://dribbble.com/shots/3965778-Cezan-404-Page-Not-Found
+ */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #00274C;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.number {
+  font-weight: 900;
+  font-size: 150px;
+  line-height: 1;
+}
+
+.illustration {
+  position: relative;
+  width: 122px;
+  margin: 0 21px;
+}
+
+.circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 122px;
+  height: 114px;
+  border-radius: 50%;
+  background-color: #00274C;
+}
+
+.clip {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  width: 125px;
+  height: 130px;
+  border-radius: 0 0 50% 50%;
+}
+
+.paper {
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 124px;
+  border: 3px solid #00274C;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.paper::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 14px;
+    height: 10px;
+    background-color: white;
+    border-bottom: 3px solid #00274C;
+    transform: rotate(45deg);
+  }
+
+.face {
+  position: relative;
+  margin-top: 23px;
+}
+
+.eyes {
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 46px;
+  height: 8px;
+}
+
+.eye {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00274C;
+  animation-name: eye;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.eye-left {
+    left: 0;
+  }
+
+.eye-right {
+    right: 0;
+  }
+
+@keyframes eye {
+  0% {
+    height: 8px;
+  }
+  50% {
+    height: 8px;
+  }
+  52% {
+    height: 1px;
+  }
+  54% {
+    height: 8px;
+  }
+  100% {
+    height: 8px;
+  }
+}
+
+.rosyCheeks {
+  position: absolute;
+  top: 16px;
+  width: 10px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #FFCB05;
+}
+
+.rosyCheeks-left {
+    left: 14px;
+  }
+
+.rosyCheeks-right {
+    right: 14px;
+  }
+
+.mouth {
+  position: absolute;
+  top: 31px;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  transform: translateX(-50%);
+  background-color: #00274C;
+}
+
+.text {
+  margin-top: 50px;
+  font-weight: 300;
+  color: #00274C;
+}
+
+.button {
+  margin-top: 40px;
+  padding: 12px 30px;
+  color: #00274C;
+  background-color: #FFCB05;
+  font-weight: bold;
+}
+
+.button:hover {
+    color: #FFFFFF;
+    background-color: #00274C;
+  }
+
+.by {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  text-transform: uppercase;
+  color: #00274C;
+}
+
+.byLink {
+  color: #00274C;
+}
+
+.button:focus-visible {
+  outline: 3px solid #00274C;
+  outline-offset: 3px;
+}
+
+footer {
+  padding: 24px 16px;
+  border-top: 3px solid #FFCB05;
+  background-color: #00274C;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+footer address {
+  margin-block: 16px;
+  font-style: normal;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+footer a:focus-visible {
+  outline: 3px solid #FFCB05;
+  outline-offset: 3px;
+}
